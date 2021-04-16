@@ -1,5 +1,7 @@
 
 import random
+
+
 from random import choice
 
 
@@ -16,14 +18,16 @@ lines = f.readlines()
 random_name = (lines[random.randint(1, line_count-1)])
 
 
-for i in range(0, 1):
+for i in range(0, 5):
 
-    print(random_name)
+    #print(random_name)
+    hp = random.randint(9, 14)
     str = 20 + 2 * random.randint(1, 10)
     dex = 20 + 2 * random.randint(1, 10)
     int = 20 + 2 * random.randint(1, 10)
     sw = 20 + 2 * random.randint(1, 10)
     ogd = 20 + 2 * random.randint(1, 10)
+    print('hp = ', hp)
     print("siła = ", str,'\nzręczność = ', dex,'\ninteligencja = ', int,'\nsiła woli = ', sw,'\nogłada = ', ogd)
     print("****************************************")
 # do zribienia:
@@ -31,6 +35,4 @@ for i in range(0, 1):
 # - dokończyć wszystkie staty i zobaczyć czy działają na telefonie
 # - zainstalować kivy żeby był jakiś frontend
 # -
-
-
 
