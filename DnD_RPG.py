@@ -61,7 +61,7 @@ def dnd_rpg():
             waepon = "toporek 1k6"
         elif random_percentage_weapon <= 70:
             waepon = "oszczep 1k6"
-        elif random_percentage_weapon <= 76:
+        elif random_percentage_weapon <= 75:
             waepon = "kusza 1k8"
         elif random_percentage_weapon <= 84:
             waepon = "włócznia 1k6/1k8"
