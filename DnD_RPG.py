@@ -20,10 +20,10 @@ def dnd_rpg():
         # determining the level of NPC
         random_percentage_level = random.randint(1, 100)
         if random_percentage_level <= 75:
-            level = "żółtodziób"
+            level = "chłop"
             level_number = 2
         elif random_percentage_level < 89:
-            level = "amator"
+            level = "najemnik"
             level_number = 3
         elif random_percentage_level <= 93:
             level = "zawodowiec"

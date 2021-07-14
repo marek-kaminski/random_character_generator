@@ -88,7 +88,7 @@ def stalker_rpg():
         if random_percentage_loot <= 50:
             loot = ""
         elif random_percentage_loot <=60:
-            loot = "bandarze +1k4 hp"
+            loot = "bandaże +1k4 hp"
         elif random_percentage_loot <=75:
             loot = "granat 5Xd6"
         elif random_percentage_loot <=85:
