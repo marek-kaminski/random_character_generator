@@ -44,6 +44,7 @@ def warhammer_fantasy_rpg():
         umiejetnoscistrzeleckie = 20 + random_stat_d10()
         sila = 20 + random_stat_d10()
         odpornosc = 20 + random_stat_d10()
+        zwinność = 20 + random_stat_d10()
         zrecznosc = 20 + random_stat_d10()
         inteligencja = 20 + random_stat_d10()
         silawoli = 20 + random_stat_d10()
@@ -122,6 +123,7 @@ def warhammer_fantasy_rpg():
               "\numiejętności strzeleckie = ", umiejetnoscistrzeleckie,
               "\nsiła = ", sila,
               "\nodporność = ", odpornosc,
+              "\nzwinność = ", zwinność,
               '\nzręczność = ', zrecznosc,
               '\ninteligencja = ', inteligencja,
               '\nsiła woli = ', silawoli,
