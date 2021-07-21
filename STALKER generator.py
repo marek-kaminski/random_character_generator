@@ -8,13 +8,20 @@ nouns = ['Ability\n', 'Access\n', 'Accident\n', 'Account\n', 'Act\n', 'Action\n'
 
 def stalker_rpg():
     character_number = int(input('wybierz liczbę postaci: '))
+
+    def random_stat_d10():
+        stat = 0
+        for i in range(0, level_number):
+            stat = stat + random.randint(1, 10)
+        return stat
+
     for i in range(0, character_number):
         # kod na stalkera
 
         # determining the level of NPC
         random_percentage_level = random.randint(1, 100)
         if random_percentage_level <= 75:
-            level = "żółtodziub"
+            level = "żółtodziób"
             level_number = 2
         elif random_percentage_level < 95:
             level = "zawodowiec"
@@ -29,14 +36,15 @@ def stalker_rpg():
 
         # determining the statistics of the NPC
         hp = 5 + (level_number-1) * random.randint(4, 9)
-        walkawrecz = 20 + level_number * random.randint(1, 10)
-        umiejetnoscistrzeleckie = 20 + level_number * random.randint(1, 10)
-        sila = 20 + level_number * random.randint(1, 10)
-        odpornosc = 20 + level_number * random.randint(1, 10)
-        zrecznosc = 20 + level_number * random.randint(1, 10)
-        inteligencja = 20 + level_number * random.randint(1, 10)
-        silawoli = 20 + level_number * random.randint(1, 10)
-        oglada = 20 + level_number * random.randint(1, 10)
+        walkawrecz = 20 + random_stat_d10()
+        umiejetnoscistrzeleckie = 20 + random_stat_d10()
+        sila = 20 + random_stat_d10()
+        odpornosc = 20 + random_stat_d10()
+        zrecznosc = 20 + random_stat_d10()
+        zwinnosc = 20 + random_stat_d10()
+        inteligencja = 20 + random_stat_d10()
+        silawoli = 20 + random_stat_d10()
+        oglada = 20 + random_stat_d10()
         wzrost = random.randint(150, 180)
         waga = random.randint(55, 100)
         wiek = random.randint(17, 60)
@@ -46,32 +54,54 @@ def stalker_rpg():
         name = name.replace('\n', '')
 
         # determining the weapon
-        random_percentage_weapon = (10 * (level_number - 1)) + random.randint(1, 100)
-        if random_percentage_weapon <= 30:
+        random_percentage_weapon = (100 * (level_number - 1)) + random.randint(1, 700)
+        if random_percentage_weapon <= 300:
             waepon = "pistolet makarov 3+1k4 + nóż S-1"
-        elif random_percentage_weapon <= 48:
-            waepon = "pistolet glock 4+1k8"
-        elif random_percentage_weapon <= 58:
+        elif random_percentage_weapon <= 400:
             waepon = "sztucer 4+1k10"
-        elif random_percentage_weapon <= 70:
+        elif random_percentage_weapon <= 450:
             waepon = "AK-74 5+1k6"
-        elif random_percentage_weapon <= 76:
-            waepon = "obrzyn 5X1k6"
-        elif random_percentage_weapon <= 84:
+        elif random_percentage_weapon <= 500:
+            waepon = "obrzyn 4X1k6"
+        elif random_percentage_weapon <= 510:
             waepon = "strzelba dwururka 5X1k6"
-        elif random_percentage_weapon <= 90:
-            waepon = "rewolwer 2+1k10"
-        elif random_percentage_weapon <= 93:
-            waepon = "MP5 4+1k6"
-        elif random_percentage_weapon <= 96:
-            waepon = "shotgun 4X1k6"
-        elif random_percentage_weapon <= 99:
-            waepon = "karabin M16 4+1k10"
+        elif random_percentage_weapon <= 550:
+            waepon = "Glock xm 4+1k8(3)(9)"
+        elif random_percentage_weapon <= 570:
+            waepon = "S&W 642 2+1k10(2)(6)"
+        elif random_percentage_weapon <= 600:
+            waepon = "Glock 41 4+1k10(3)(9)"
+        elif random_percentage_weapon <= 630:
+            waepon = "S&W m22 3 +1k12(2)(6) 1kg"
+        elif random_percentage_weapon <= 660:
+            waepon = "S&W 686 4+1k12(2)(6) 2kg"
+        elif random_percentage_weapon <= 680:
+            waepon = "Khar PM 4+1k6(2)(5) 0kg"
+        elif random_percentage_weapon <= 700:
+            waepon = "Derringer 3+1k10(1)(2)"
+        elif random_percentage_weapon <= 750:
+            waepon = "Uzi 4+1k6(5)(25)"
+        elif random_percentage_weapon <= 800:
+            waepon = "MP5 4+1k6(3)(15)"
+        elif random_percentage_weapon <= 850:
+            waepon = "Shotgun 4X1d6(2)(5)"
+        elif random_percentage_weapon <= 920:
+            waepon = "M16 4+1k10(3)(15)"
+        elif random_percentage_weapon <= 975:
+            waepon = "Remington 700 5+1k20(1)(4)"
+        elif random_percentage_weapon <= 990:
+            waepon = "M 24 7+1k20(1)(5)"
+        elif random_percentage_weapon <= 995:
+            waepon = "miotacz ognia M2A1-7 8k6(1)(5)"
+        elif random_percentage_weapon <= 997:
+            waepon = "M134D minigun 5+1k6(7)(100)"
+        elif random_percentage_weapon <= 999:
+            waepon = "RPG7 6+6k6(1)(1)"
         else:
-            waepon = "strzelba Remington 5+1k20"
+            waepon = "CMMG banshee 5+1k10(3)(20)"
 
         # determining the armour
-        random_percentage_armour = (10 * (level_number - 1)) + random.randint(1, 100)
+        random_percentage_armour = (10 * (level_number - 1)) + random.randint(1, 80)
         if random_percentage_armour <= 30:
             armour = ""
         elif random_percentage_armour <=80:
@@ -84,25 +114,29 @@ def stalker_rpg():
             armour = "kamizelka modułowa 4pp"
 
         # determining the loot
-        random_percentage_loot= (10 * (level_number - 1)) + random.randint(1, 100)
-        if random_percentage_loot <= 50:
+        random_percentage_loot= (10 * (level_number - 1)) + random.randint(1, 80)
+        if random_percentage_loot <= 20:
             loot = ""
-        elif random_percentage_loot <=60:
-            loot = "bandaże +1k4 hp"
-        elif random_percentage_loot <=75:
-            loot = "granat 5Xd6"
-        elif random_percentage_loot <=85:
-            loot = "dodatkowy magazynek"
-        elif random_percentage_loot <=96:
+        elif random_percentage_loot <=30:
+            loot = "bandaże"
+        elif random_percentage_loot <=45:
             loot = "leki przeciwbólowe 2+1k6"
-        elif random_percentage_loot <=98:
+        elif random_percentage_loot <=65:
+            loot = "maska pgaz"
+        elif random_percentage_loot <=75:
+            loot = "dodatkowy magazynek"
+        elif random_percentage_loot <=80:
+            loot = "granat 5Xd6"
+        elif random_percentage_loot <=90:
+            loot = "opioid metadon 2+1k10 hp"
+        elif random_percentage_loot <=96:
             loot = "leki popromienne 3+1k8"
         elif random_percentage_loot <= 99:
             loot = "ulepszenie do broni"
         else:
-            loot = "artefakt"
+            loot = "ulepszenie do broni"
 
-        print(name, " ", level)
+        print("\n", name, " ", level)
         print("wzrost=", wzrost, "cm", " waga=", waga, " wiek=", wiek)
         print('hp = ', hp)
         print("walka wręcz = ", walkawrecz,
@@ -110,10 +144,11 @@ def stalker_rpg():
               "\nsiła = ", sila,
               "\nodporność = ", odpornosc,
               '\nzręczność = ', zrecznosc,
+              '\nzwinnosc = ', zwinnosc,
               '\ninteligencja = ', inteligencja,
               '\nsiła woli = ', silawoli,
               '\nogłada = ', oglada)
-        print("Pieniądze: ", random.randint(0, 150))
+        print("Pieniądze: ", level_number * random.randint(0, 80))
         print("Przedmioty: ")
         print(armour)
         print(waepon)
@@ -124,6 +159,5 @@ def stalker_rpg():
             noun = noun.replace('\n', ' ')
             print(noun, end="")
 
-        print("\n****************************************")
 
-
+stalker_rpg()
