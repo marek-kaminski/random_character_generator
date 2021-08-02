@@ -1,46 +1,48 @@
 BoxLayoutExample:
 
-<PageLayoutExample@PageLayout>:
-    BoxLayout:
-    LAbel:
 
 
 <BoxLayoutExample>:
 
     BoxLayout:
         orientation: "vertical"
-
+        size_hint: 0.5, 1
         Label:
             text: "Wybierz system:"
-            size_hint: .3, .3
+            text_size: self.width, None
+            padding_x: 10
+            size_hint: 1, .5
 
 
         Button:
             text: "S.T.A.L.K.E.R"
-            size_hint: .5, .5
+            text_size: self.width, None
+            on_press: root.on_button_click()
+            padding_x: 10
+            size_hint: 1, .5
 
 
         Button:
             text: "Star Wars"
-            size_hint: .5, .5
-
+            text_size: self.width, None
+            padding_x: 10
+            size_hint: 1, .5
         Button:
             text: "Warhammer fantasy"
-            size_hint: .5, .5
-
+            text_size: self.width, None
+            padding_x: 10
+            size_hint: 1, .5
 
         Button:
             text: "DnD"
-            size_hint: .5, .5
-
+            text_size: self.width, None
+            padding_x: 10
+            size_hint: 1, .5
 
 	Label:
-		text: "label"
-		size_hint: .3, .3
+		text: root.my_text
+		text_size: self.width, None
+		#size_hint: .3, .3
 
 
-<ScrollViewExample>:
-    BoxLayoutExample:
-        text: "label"
-        size_hint: 1, None
-        height: self.minimum_height
+
