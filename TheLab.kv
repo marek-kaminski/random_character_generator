@@ -1,5 +1,10 @@
 BoxLayoutExample:
 
+<PageLayoutExample@PageLayout>:
+    BoxLayout:
+    LAbel:
+
+
 <BoxLayoutExample>:
 
     BoxLayout:
@@ -34,7 +39,8 @@ BoxLayoutExample:
 		size_hint: .3, .3
 
 
-#<ScrollViewExample@ScrollViev>:
-#    StackLayoutExample:
-#        size_hint: 1, None
-#        height: self.minimum_height
+<ScrollViewExample>:
+    BoxLayoutExample:
+        text: "label"
+        size_hint: 1, None
+        height: self.minimum_height
