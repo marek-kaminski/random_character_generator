@@ -6,9 +6,25 @@ nouns = ['Ability\n', 'Access\n', 'Accident\n', 'Account\n', 'Act\n', 'Action\n'
 
 
 
-def stalker_rpg():
-    character_number = int(input('wybierz liczbę postaci: '))
 
+b = 0
+
+
+def simple_printing():
+    global b
+    b = "this pile of garbage works"
+    # print("this pile of garbage works")
+
+
+
+
+
+
+
+
+def stalker_rpg():
+    # character_number = int(input('wybierz liczbę postaci: '))
+    character_number = 1
     def random_stat_d10():
         stat = 0
         for i in range(0, level_number):
@@ -135,10 +151,10 @@ def stalker_rpg():
             loot = "ulepszenie do broni"
         else:
             loot = "ulepszenie do broni"
-
-        print("\n", name, " ", level)
-        print("wzrost=", wzrost, "cm", " waga=", waga, " wiek=", wiek)
-        print('hp = ', hp)
+        print(
+        print("\n", name, " ", level),
+        print("wzrost=", wzrost, "cm", " waga=", waga, " wiek=", wiek),
+        print('hp = ', hp),
         print("walka wręcz = ", walkawrecz,
               "\numiejętności strzeleckie = ", umiejetnoscistrzeleckie,
               "\nsiła = ", sila,
@@ -147,12 +163,12 @@ def stalker_rpg():
               '\nzwinnosc = ', zwinnosc,
               '\ninteligencja = ', inteligencja,
               '\nsiła woli = ', silawoli,
-              '\nogłada = ', oglada)
-        print("Pieniądze: ", level_number * random.randint(0, 80))
-        print("Przedmioty: ")
-        print(armour)
-        print(waepon)
-        print(loot)
+              '\nogłada = ', oglada),
+        print("Pieniądze: ", level_number * random.randint(0, 80)),
+        print("Przedmioty: "),
+        print(armour),
+        print(waepon),
+        print(loot))
         for j in range(1, (level_number-1) * random.randint(2, 6)):
             random_noun = random.randrange(len(nouns))
             noun = nouns[random_noun]
@@ -160,4 +176,4 @@ def stalker_rpg():
             print(noun, end="")
 
 
-stalker_rpg()
+
