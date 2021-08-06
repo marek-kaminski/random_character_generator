@@ -1,0 +1,95 @@
+
+import random
+
+random_percentage_weapon = random.randint(1, 100)
+
+random_percentage_waepon = random.randint(1, 100)
+if random_percentage_weapon <= 30:
+    waepon = "pistolet makarov + nóż"
+elif random_percentage_weapon <= 48:
+    waepon = "pistolet zwykły"
+elif random_percentage_weapon <= 58:
+    waepon = "rewolwer"
+elif random_percentage_weapon <= 70:
+    waepon = "AK-74"
+elif random_percentage_weapon <= 76:
+    waepon = "MP5"
+elif random_percentage_weapon <= 84:
+    waepon = "strzelba dwururka"
+elif random_percentage_weapon <= 90:
+    waepon = "obrzyn"
+elif random_percentage_weapon <= 93:
+    waepon = "strzelba Remington"
+elif random_percentage_weapon <= 96:
+    waepon = "shotgun"
+elif random_percentage_weapon <= 99:
+    waepon = "karabin M16"
+else:
+    waepon = "miotacz ognia"
+
+random_percentage_level = random.randint(1, 100)
+if random_percentage_level <= 75:
+    level = "żółtodziub"
+    level_number = 2
+elif random_percentage_level < 95:
+    level = "zawodowiec"
+    level_number = 3
+elif random_percentage_level <= 99:
+    level = "weteran"
+    level_number = 4
+else:
+    level = "legenda"
+    level_number = 5
+
+
+# ten kod nam daje error bo nie widzi x poza funkcją
+# def foo2():
+#     x = 5
+#
+# foo2()
+# print(x)
+
+
+# ten kod nam printuje 10 bo funkcja nie może nadpisac obiektu niemutowalnego, ale np może nadpisać listę
+# def foo(x):
+#     x= 5
+#     print(x)
+# var = 10
+# foo(var)
+# print(var)
+
+#  to nam daje [1, 2, 3, 200, 300, 400] bo lissta jest mutowalna i zmienia nam oryginalna liste
+# def foo(a_list):
+#     a_list += [200, 300, 400]
+# my_list = [1, 2, 3]
+# foo(my_list)
+# print(my_list)
+
+#  to nam wyprintuje 20 jak kod dojdzie do wariable bar a pozniej przy princie da nam None, bo bar tylko zrobil call tej funkcji
+# def foo():
+#     print(20)
+# bar = foo()
+# print(bar)
+
+# WTF? co to za magia. Mozna w pythonie wywolywac nie tylko funkcje ale tez nadawac funkcje bez wywolania i wywolywac zwykle stringi O_o
+# def foo():
+#     print(20)
+# bar = foo
+# bar()
+
+def foo():
+    print(20)
+bar = foo
+bar()
+buz = bar(), "dwadzieścia"
+# print(buz)
+
+
+
+
+
+
+
+
+
+
