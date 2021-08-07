@@ -137,10 +137,6 @@ def warhammer_fantasy_rpg():
 
 
 
-warhammer_fantasy_rpg()
-
-print(starwars_character)
-
 
 
 

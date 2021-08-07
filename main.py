@@ -6,7 +6,7 @@ from kivy.uix.scrollview import ScrollView
 from STALKER_RPG import stalker_rpg
 from STALKER_RPG import simple_printing
 from STALKER_RPG import printer
-
+from test_function import warhammer_fantasy_rpg
 
 def printer2():
     global x
@@ -20,9 +20,9 @@ class BoxLayoutExample(BoxLayout):
     def on_button_click(self):
         #need to add the "self." property before my_text, otherwise it will be a local variable
         final_stalker = 0
-        x = 1
-        printer2()
-        self.my_text = str(x)
+        starwars_character = 0
+        warhammer_fantasy_rpg()
+        self.my_text = starwars_character
 
 
 # class MainWidget(Widget):
