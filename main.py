@@ -1,4 +1,5 @@
 from kivy.app import App
+from kivy_deps import sdl2, glew
 from kivy.properties import StringProperty
 from kivy.uix.boxlayout import BoxLayout
 # from kivy.uxi.widget import Widget
