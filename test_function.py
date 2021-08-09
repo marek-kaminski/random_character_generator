@@ -134,9 +134,9 @@ def warhammer_fantasy_rpg():
         #     print(noun, end="")
         global starwars_character
         starwars_character = starwars_datas, starwars_stats, starwars_items
+        print(starwars_character)
 
-
-
+warhammer_fantasy_rpg()
 
 
 
