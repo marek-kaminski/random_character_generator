@@ -6,9 +6,9 @@ nouns = ['Ability\n', 'Access\n', 'Accident\n', 'Account\n', 'Act\n', 'Action\n'
 
 starwars_character = 0
 
-def warhammer_fantasy_rpg():
+def warhammer_fantasy_rpg(character_number):
     # character_number = int(input('wybierz liczbę postaci: '))
-    character_number = 1
+    # character_number = 1
     def random_stat_d10():
         stat = 0
         for i in range(0, level_number):
@@ -132,14 +132,17 @@ def warhammer_fantasy_rpg():
         #     noun = nouns[random_noun]
         #     noun = noun.replace('\n', ' ')
         #     print(noun, end="")
-        global starwars_character
         starwars_character = starwars_datas, starwars_stats, starwars_items
-        print(starwars_character)
+    return starwars_character
 
-warhammer_fantasy_rpg()
+        # global starwars_character
+        # starwars_character = starwars_datas, starwars_stats, starwars_items
+        # print(starwars_character)
+
+abc = warhammer_fantasy_rpg(1)
 
 
-
+print(abc)
 
 
 

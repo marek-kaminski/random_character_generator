@@ -8,6 +8,7 @@ from STALKER_RPG import stalker_rpg
 from STALKER_RPG import simple_printing
 from STALKER_RPG import printer
 from test_function import warhammer_fantasy_rpg
+from test_function import abc
 
 def printer2():
     global x
@@ -152,18 +153,17 @@ def warhammer_fantasy_rpg():
         starwars_character = starwars_datas, starwars_stats, starwars_items
 
 
-starwars_character = 0
-warhammer_fantasy_rpg()
+# warhammer_fantasy_rpg()
 
 class BoxLayoutExample(BoxLayout):
     my_text = StringProperty("a")
     def on_button_click(self):
         #need to add the "self." property before my_text, otherwise it will be a local variable
 
-
+        ls =  '\nzręczność = ',  '\\ninteligencja = '
 
         print(starwars_character)
-        self.my_text = str(starwars_character)
+        self.my_text = str(abc)
 
 
 # class MainWidget(Widget):
