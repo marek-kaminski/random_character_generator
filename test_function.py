@@ -15,7 +15,7 @@ def warhammer_fantasy_rpg(character_number):
             stat = stat + random.randint(1, 10)
         return stat
 
-
+    starwars_character = 0
     for i in range(0, character_number):
         # kod na stalkera
 
@@ -132,14 +132,14 @@ def warhammer_fantasy_rpg(character_number):
         #     noun = nouns[random_noun]
         #     noun = noun.replace('\n', ' ')
         #     print(noun, end="")
-        starwars_character = starwars_datas, starwars_stats, starwars_items
+        starwars_character = starwars_character, starwars_datas, starwars_stats, starwars_items
     return starwars_character
 
         # global starwars_character
         # starwars_character = starwars_datas, starwars_stats, starwars_items
         # print(starwars_character)
 
-abc = warhammer_fantasy_rpg(1)
+abc = warhammer_fantasy_rpg(4)
 
 
 print(abc)

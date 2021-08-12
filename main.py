@@ -156,7 +156,7 @@ def warhammer_fantasy_rpg():
 # warhammer_fantasy_rpg()
 
 class BoxLayoutExample(BoxLayout):
-    my_text = StringProperty("a")
+    my_text = StringProperty("This is a\nmultiline\nlabel")
     def on_button_click(self):
         #need to add the "self." property before my_text, otherwise it will be a local variable
 
