@@ -116,15 +116,16 @@ def warhammer_fantasy_rpg(character_number):
         else:
             loot = "generator pola +3 pp(3 tury)"
 
-        starwars_datas = name, " ", level,"wzrost=", wzrost, "cm", " waga=", waga, " wiek=", wiek,'hp = ', hp
-        starwars_stats = "walka wręcz = ", walkawrecz,"\numiejętności strzeleckie = ", umiejetnoscistrzeleckie,"\nsiła = ", sila,"\nodporność = ", odpornosc,"\nzwinność = ", zwinnosc,'\nzręczność = ', zrecznosc, '\ninteligencja = ', inteligencja, '\nsiła woli = ', silawoli, '\nogłada = ', oglada
-        starwars_items = "Kredyty: ", random.randint(1, 50), "Przedmioty: ", armour, waepon, loot
+        starwars_datas = [name, " ", level,"wzrost=", wzrost, "cm", " waga=", waga, " wiek=", wiek,'hp = ', hp]
+        starwars_stats = ["walka wręcz = ", walkawrecz,"\numiejętności strzeleckie = ", umiejetnoscistrzeleckie,"\nsiła = ", sila,"\nodporność = ", odpornosc,"\nzwinność = ", zwinnosc,'\nzręczność = ', zrecznosc, '\ninteligencja = ', inteligencja, '\nsiła woli = ', silawoli, '\nogłada = ', oglada]
+        starwars_items = ["Kredyty: ", random.randint(1, 50), "Przedmioty: ", armour, waepon, loot]
         # for j in range(1, (level_number-1) * random.randint(2, 6)):
         #     random_noun = random.randrange(len(nouns))
         #     noun = nouns[random_noun]
         #     noun = noun.replace('\n', ' ')
         #     print(noun, end="")
-        starwars_character = starwars_character, starwars_datas, starwars_stats, starwars_items
+
+        starwars_character = [starwars_character, starwars_datas, starwars_stats, starwars_items]
         # starwars_character_list = list(starwars_character)
         # starwars_character_list = [s.replace("(", "") for s in starwars_character_list]
         # starwars_character = starwars_character_list
@@ -135,12 +136,14 @@ def warhammer_fantasy_rpg(character_number):
         # print(starwars_character)
 
 abc = warhammer_fantasy_rpg(4)
-abc_list = list(abc)
-print(abc)
+# abc_list = list(abc)
+# print(abc)
+
 
 # abc_list = [abc_list.replace(0, "1")]
 # print(abc_list)
-# # new_list = [s.replace("(", "") for s in abc_list]
+kickoff = [item.replace("'", "") for item in abc]
+# new_list = [s.replace("(", "") for s in list1]
 # abc_list_cleared = [abc_list.replace('(', "")]
 # print(abc_list)
 
