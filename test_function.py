@@ -124,8 +124,11 @@ def warhammer_fantasy_rpg(character_number):
         #     noun = nouns[random_noun]
         #     noun = noun.replace('\n', ' ')
         #     print(noun, end="")
-
+        # print(starwars_datas)
+        # kickoff = [item.replace("'", "") for item in str(starwars_datas)]
+        # print(kickoff)
         starwars_character = [starwars_character, starwars_datas, starwars_stats, starwars_items]
+
         # starwars_character_list = list(starwars_character)
         # starwars_character_list = [s.replace("(", "") for s in starwars_character_list]
         # starwars_character = starwars_character_list
@@ -135,17 +138,16 @@ def warhammer_fantasy_rpg(character_number):
         # starwars_character = starwars_datas, starwars_stats, starwars_items
         # print(starwars_character)
 
-abc = warhammer_fantasy_rpg(4)
-# abc_list = list(abc)
-# print(abc)
+abc = warhammer_fantasy_rpg(1)
 
-
-# abc_list = [abc_list.replace(0, "1")]
-# print(abc_list)
-kickoff = [item.replace("'", "") for item in abc]
-# new_list = [s.replace("(", "") for s in list1]
-# abc_list_cleared = [abc_list.replace('(', "")]
-# print(abc_list)
+# kickoff = [item.replace("'", "") for item in abc]
+new_list = [s.replace("żółtodziub", "") for s in str(abc)]
+# new_list = [s.replace("[", "") for s in str(new_list)]
+# new_list = [s.replace(",", "") for s in str(new_list)]
+# print(' '.join(new_list))
+abc_list_cleared = [str(abc).replace('[', "")]
+abc_list_cleared = (' '.join(abc_list_cleared))
+print(abc_list_cleared)
 
 
 # list_of_strings = abc_list
