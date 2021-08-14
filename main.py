@@ -8,7 +8,7 @@ from STALKER_RPG import stalker_rpg
 from STALKER_RPG import simple_printing
 from STALKER_RPG import printer
 from test_function import warhammer_fantasy_rpg
-from test_function import abc
+from test_function import abc_list_cleared
 
 
 
@@ -17,7 +17,12 @@ class BoxLayoutExample(BoxLayout):
     def on_button_click(self):
         #need to add the "self." property before my_text, otherwise it will be a local variable
 
-        self.my_text = str(abc)
+        self.my_text = str(abc_list_cleared)
+
+    def on_button_clear(self):
+        #need to add the "self." property before my_text, otherwise it will be a local variable
+
+        self.my_text = ""
 
 
 
