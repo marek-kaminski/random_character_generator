@@ -125,18 +125,18 @@ def warhammer_fantasy_rpg(character_number):
             noun = nouns[random_noun]
             noun = noun.replace('\n', ' ')
             starwars_items = str(starwars_items) + noun
-            print(noun, end="")
+
 
         starwars_character = [starwars_character, starwars_datas, starwars_stats, starwars_items]
+    abc_list_cleared = [
+        str(starwars_character).replace('[', "").replace(',', "").replace("'", "").replace(']', "").replace('"', "")]
+    abc_list_cleared = (' '.join(abc_list_cleared))
+
+    return abc_list_cleared
 
 
-    return starwars_character
 
-abc = warhammer_fantasy_rpg(1)
 
-abc_list_cleared = [str(abc).replace('[', "").replace(',', "").replace("'", "").replace(']', "").replace('"', "")]
-abc_list_cleared = (' '.join(abc_list_cleared))
-print(abc_list_cleared)
 
 
 # list_of_strings = abc_list
