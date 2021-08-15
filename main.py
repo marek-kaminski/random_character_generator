@@ -15,10 +15,10 @@ class BoxLayoutExample(BoxLayout):
     def on_button_click(self):
         from test1 import abc_list_cleared
         #need to add the "self." property before my_text, otherwise it will be a local variable
-
-        print(abc_list_cleared)
-
-        self.my_text = str(abc_list_cleared)
+        # from test_function import warhammer_fantasy_rpg
+        # print(warhammer_fantasy_rpg(1))
+        abc = print(warhammer_fantasy_rpg(1))
+        self.my_text = str(warhammer_fantasy_rpg(1))
 
     def on_button_clear(self):
         abc_list_cleared = 0
