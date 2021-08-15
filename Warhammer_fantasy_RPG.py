@@ -144,5 +144,5 @@ def warhammer_fantasy_rpg():
 
         print("\n****************************************")
 
-
+warhammer_fantasy_rpg()
 
