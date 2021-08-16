@@ -129,18 +129,7 @@ def warhammer_fantasy_rpg(character_number):
 
         starwars_character = [starwars_character, starwars_datas, starwars_stats, starwars_items]
     abc_list_cleared = [
-        str(starwars_character).replace('[', "").replace(',', "").replace("'", "").replace(']', "").replace('"', "")]
+        str(starwars_character).replace('[', "").replace(',', "").replace("'", "").replace(']', "").replace('"', "").replace('\n', "*")]
     abc_list_cleared = (' '.join(abc_list_cleared))
 
     return abc_list_cleared
-
-
-
-
-
-
-# list_of_strings = abc_list
-# print(list_of_strings)
-# new_list = [s.replace("(", "") for s in list_of_strings]
-# print(new_list)
-
