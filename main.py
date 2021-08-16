@@ -6,19 +6,30 @@ from kivy.uix.boxlayout import BoxLayout
 from kivy.uix.scrollview import ScrollView
 from STALKER_RPG import stalker_rpg
 from test_function import warhammer_fantasy_rpg
+from test_function import abc_list_cleared
+
+def abcd():
+    abbbb = "aaaa\nbb"
+    return abbbb
+
+
 
 
 class BoxLayoutExample(BoxLayout):
     my_text = StringProperty("This is a\nmultiline\nlabel")
     def on_button_click(self):
-        # from test1 import abc_list_cleared
+        warhammer_fantasy_rpg(1)
+        starwars_character = warhammer_fantasy_rpg(1)
+        abc_list_cleared = [
+            str(starwars_character).replace('[', "").replace(',', "").replace("'", "").replace(']', "").replace('"',
+                                                                                                                "").replace('\\n', "\n").replace('żółtodziub', "*")]
         #need to add the "self." property before my_text, otherwise it will be a local variable
-        self.my_text = str(warhammer_fantasy_rpg(1))
+        self.my_text = str(abc_list_cleared)
 
     def on_button_clear(self):
         abc_list_cleared = 0
         #need to add the "self." property before my_text, otherwise it will be a local variable
-        self.my_text = str(abc_list_cleared)
+        self.my_text = str(abcd())
 
 
 
