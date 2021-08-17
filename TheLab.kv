@@ -17,7 +17,7 @@ BoxLayoutExample:
         Button:
             text: "S.T.A.L.K.E.R"
             text_size: self.width, None
-            on_press: root.on_button_click()
+            on_press: root.on_button_click_STALKER()
             padding_x: 10
             size_hint: 1, .5
 
@@ -25,18 +25,20 @@ BoxLayoutExample:
         Button:
             text: "Star Wars"
             text_size: self.width, None
-            on_press: root.on_button_clear()
+            on_press: root.on_button_click_Star_Wars()
             padding_x: 10
             size_hint: 1, .5
         Button:
             text: "Warhammer fantasy"
             text_size: self.width, None
+            on_press: root.on_button_click_Warhammer_fantasy()
             padding_x: 10
             size_hint: 1, .5
 
         Button:
             text: "DnD"
             text_size: self.width, None
+            on_press: root.on_button_click_DnD()
             padding_x: 10
             size_hint: 1, .5
 

@@ -116,9 +116,9 @@ def warhammer_fantasy_rpg(character_number):
         else:
             loot = "generator pola +3 pp(3 tury)"
 
-        starwars_datas = [name, " ", level,"wzrost=", wzrost, "cm", " waga=", waga, " wiek=", wiek,'hp = ', hp]
+        starwars_datas = [name, " ", level,"\nwzrost=", wzrost, "cm", " \nwaga=", waga, " \nwiek=", wiek,'\nhp = ', hp]
         starwars_stats = ["walka wręcz = ", walkawrecz,"\numiejętności strzeleckie = ", umiejetnoscistrzeleckie,"\nsiła = ", sila,"\nodporność = ", odpornosc,"\nzwinność = ", zwinnosc,'\nzręczność = ', zrecznosc, '\ninteligencja = ', inteligencja, '\nsiła woli = ', silawoli, '\nogłada = ', oglada]
-        starwars_items = ["Kredyty: ", random.randint(1, 50), "Przedmioty: ", armour, waepon, loot]
+        starwars_items = ["\nKredyty: ", random.randint(1, 50), "\nPrzedmioty: ", armour, waepon, "\n", loot]
 
         for j in range(1, (level_number-1) * random.randint(2, 6)): #This loop will add the random nouns that describe a character or his features
             random_noun = random.randrange(len(nouns))
@@ -129,7 +129,7 @@ def warhammer_fantasy_rpg(character_number):
 
         starwars_character = [starwars_character, starwars_datas, starwars_stats, starwars_items]
     abc_list_cleared = [
-        str(starwars_character).replace('[', "").replace(',', "").replace("'", "").replace(']', "").replace('"', "").replace('\n', "*")]
+        str(starwars_character).replace('[', "").replace(',', "").replace("'", "").replace(']', "").replace('"', "")]
     abc_list_cleared = (' '.join(abc_list_cleared))
 
     return abc_list_cleared
