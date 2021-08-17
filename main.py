@@ -7,15 +7,15 @@ from kivy.uix.scrollview import ScrollView
 from STALKER_RPG import stalker_rpg
 from test_function import warhammer_fantasy_rpg
 from test_function import abc_list_cleared
-
+from STALKER_RPG import stalker_rpg
 
 class BoxLayoutExample(BoxLayout):
     my_text = StringProperty("This is a\nmultiline\nlabel")
     def on_button_click_STALKER(self):
-        warhammer_fantasy_rpg(1)
-        starwars_character = warhammer_fantasy_rpg(1)
+        stalker_rpg()
+        stalker_character = stalker_rpg()
         abc_list_cleared = [
-            str(starwars_character).replace('[', "").replace(',', "").replace("'", "").replace(']', "").replace('"', "").replace('\\n', "\n")]
+            str(stalker_character).replace('[', "").replace(',', "").replace("'", "").replace(']', "").replace('"', "").replace('\\n', "\n")]
         abc_list_cleared = (' '.join(abc_list_cleared))
 
         #need to add the "self." property before my_text, otherwise it will be a local variable
