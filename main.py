@@ -5,7 +5,6 @@ from kivy.uix.boxlayout import BoxLayout
 # from kivy.uxi.widget import Widget
 from kivy.uix.scrollview import ScrollView
 from Warhammer_fantasy_RPG import warhammer_fantasy_rpg
-from test_function import warhammer_fantasy_rpg
 from STALKER_RPG import stalker_rpg
 from Star_Wars_RPG_homebrew import Star_Wars_rpg
 
