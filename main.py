@@ -4,16 +4,18 @@ from kivy.properties import StringProperty
 from kivy.uix.boxlayout import BoxLayout
 # from kivy.uxi.widget import Widget
 from kivy.uix.scrollview import ScrollView
-from STALKER_RPG import stalker_rpg
+from Warhammer_fantasy_RPG import warhammer_fantasy_rpg
 from test_function import warhammer_fantasy_rpg
-from test_function import abc_list_cleared
 from STALKER_RPG import stalker_rpg
+from Star_Wars_RPG_homebrew import Star_Wars_rpg
+
+
 
 class BoxLayoutExample(BoxLayout):
     my_text = StringProperty("This is a\nmultiline\nlabel")
     def on_button_click_STALKER(self):
-        stalker_rpg()
-        stalker_character = stalker_rpg()
+        stalker_rpg(1)
+        stalker_character = stalker_rpg(1)
         abc_list_cleared = [
             str(stalker_character).replace('[', "").replace(',', "").replace("'", "").replace(']', "").replace('"', "").replace('\\n', "\n")]
         abc_list_cleared = (' '.join(abc_list_cleared))
@@ -22,8 +24,8 @@ class BoxLayoutExample(BoxLayout):
         self.my_text = str(abc_list_cleared)
 
     def on_button_click_Star_Wars(self):
-        warhammer_fantasy_rpg(1)
-        starwars_character = warhammer_fantasy_rpg(1)
+        Star_Wars_rpg(1)
+        starwars_character = Star_Wars_rpg(1)
         abc_list_cleared = [
             str(starwars_character).replace('[', "").replace(',', "").replace("'", "").replace(']', "").replace('"', "").replace('\\n', "\n")]
         abc_list_cleared = (' '.join(abc_list_cleared))

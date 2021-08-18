@@ -117,7 +117,7 @@ def warhammer_fantasy_rpg(character_number):
 
         starwars_datas = [name, " ", level,"\nwzrost=", wzrost, "cm", " \nwaga=", waga, " \nwiek=", wiek,'\nhp = ', hp]
         starwars_stats = ["walka wręcz = ", walkawrecz,"\numiejętności strzeleckie = ", umiejetnoscistrzeleckie,"\nsiła = ", sila,"\nodporność = ", odpornosc,"\nzwinność = ", zwinnosc,'\nzręczność = ', zrecznosc, '\ninteligencja = ', inteligencja, '\nsiła woli = ', silawoli, '\nogłada = ', oglada]
-        starwars_items = ["\nKredyty: ", random.randint(1, 50), "\nPrzedmioty: ", armour, waepon, "\n", loot]
+        starwars_items = ["\nKredyty: ", random.randint(1, 50), "\nPrzedmioty: ", armour, waepon, "\nPrzedmioty:" ,  loot, "\nLosowe słowa które go określają: "]
 
         for j in range(1, (level_number-1) * random.randint(2, 6)): #This loop will add the random nouns that describe a character or his features
             random_noun = random.randrange(len(nouns))

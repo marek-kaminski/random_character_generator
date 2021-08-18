@@ -15,30 +15,34 @@ def stalker_rpg(character_number):
 
     stalker_character = ""
     for i in range(0, character_number):
-        # determining the level of NPC
-        random_percentage_level = random.randint(1, 100)
-        if random_percentage_level <= 75:
-            level = "żółtodziób"
+        # kod na stalkera
+
+        random_percentage_level = random.randint(1, 90)
+        if random_percentage_level <= 80:
+            level = "żółtodziub"
             level_number = 2
-        elif random_percentage_level < 95:
-            level = "zawodowiec"
+        elif random_percentage_level < 90:
+            level = "najemnik"
             level_number = 3
+        elif random_percentage_level <= 95:
+            level = "zawodowiec"
+            level_number = 4
         elif random_percentage_level <= 99:
             level = "weteran"
-            level_number = 4
+            level_number = 5
         else:
             level = "legenda"
-            level_number = 5
+            level_number = 6
 
 
         # determining the statistics of the NPC
-        hp = 5 + (level_number-1) * random.randint(4, 9)
+        hp = 7 + (level_number - 1) * random.randint(2, 5)
         walkawrecz = 20 + random_stat_d10()
         umiejetnoscistrzeleckie = 20 + random_stat_d10()
         sila = 20 + random_stat_d10()
         odpornosc = 20 + random_stat_d10()
-        zrecznosc = 20 + random_stat_d10()
         zwinnosc = 20 + random_stat_d10()
+        zrecznosc = 20 + random_stat_d10()
         inteligencja = 20 + random_stat_d10()
         silawoli = 20 + random_stat_d10()
         oglada = 20 + random_stat_d10()
@@ -133,24 +137,27 @@ def stalker_rpg(character_number):
         else:
             loot = "ulepszenie do broni"
 
-            stalker_datas = [name, " ", level, "\nwzrost=", wzrost, "cm", " \nwaga=", waga, " \nwiek=", wiek,
-                              '\nhp = ', hp]
-            stalker_stats = ["walka wręcz = ", walkawrecz, "\numiejętności strzeleckie = ", umiejetnoscistrzeleckie,
-                              "\nsiła = ", sila, "\nodporność = ", odpornosc, "\nzwinność = ", zwinnosc,
-                              '\nzręczność = ', zrecznosc, '\ninteligencja = ', inteligencja, '\nsiła woli = ',
-                              silawoli, '\nogłada = ', oglada]
-            stalker_items = ["\nPieniądze: ", level_number * random.randint(0, 80), "\nPrzedmioty: ", armour, waepon, "\n", loot]
+        stalker_datas = [name, " ", level, "\nwzrost=", wzrost, "cm", " \nwaga=", waga, " \nwiek=", wiek,
+                          '\nhp = ', hp]
+        stalker_stats = ["walka wręcz = ", walkawrecz, "\numiejętności strzeleckie = ", umiejetnoscistrzeleckie,
+                          "\nsiła = ", sila, "\nodporność = ", odpornosc, "\nzwinność = ", zwinnosc,
+                          '\nzręczność = ', zrecznosc, '\ninteligencja = ', inteligencja, '\nsiła woli = ',
+                          silawoli, '\nogłada = ', oglada, "\n"]
+        stalker_items = ["Pieniądze: ", random.randint(1, 50) * (level_number-1), "\n" , "Uzbrojenie: ", armour, waepon, "\n" , "Przedmioty:" ,  loot, "\nLosowe słowa które go określają: "]
+        random_items = ""
+        for j in range(1, (level_number - 1) * random.randint(2, 6)):  # This loop will add the random nouns that describe a character or his features
+            random_noun = random.randrange(len(nouns))
+            noun = nouns[random_noun]
+            noun = noun.replace('\n', ' ')
+            random_items = str(random_items) + noun
 
-            for j in range(1, (level_number - 1) * random.randint(2,
-                                                                  6)):  # This loop will add the random nouns that describe a character or his features
-                random_noun = random.randrange(len(nouns))
-                noun = nouns[random_noun]
-                noun = noun.replace('\n', ' ')
-                stalker_items = str(stalker_items) + noun
+        stalker_character = [stalker_datas, stalker_stats, stalker_items, random_items]
 
-            stalker_character = [stalker_datas, stalker_stats, stalker_items]
-            print(stalker_character)
-        return stalker_character
+    return stalker_character
 
-stalker_rpg(1)
+
 print(stalker_rpg(1))
+
+
+
+

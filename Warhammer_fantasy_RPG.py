@@ -6,8 +6,7 @@ nouns = ['Ability\n', 'Access\n', 'Accident\n', 'Account\n', 'Act\n', 'Action\n'
 
 
 
-def warhammer_fantasy_rpg():
-    character_number = int(input('wybierz liczbę postaci: '))
+def warhammer_fantasy_rpg(character_number):
 
     def random_stat_d10():
         stat = 0
@@ -15,7 +14,7 @@ def warhammer_fantasy_rpg():
             stat = stat + random.randint(1, 10)
         return stat
 
-
+    warhammer_character = ""
     for i in range(0, character_number):
         # kod na stalkera
 
@@ -116,33 +115,25 @@ def warhammer_fantasy_rpg():
         else:
             loot = "pancerz lepszej jakości"
 
-        print(name, " ", level)
-        print("wzrost=", wzrost, "cm", " waga=", waga, " wiek=", wiek)
-        print('hp = ', hp)
-        print("walka wręcz = ", walkawrecz,
-              "\numiejętności strzeleckie = ", umiejetnoscistrzeleckie,
-              "\nsiła = ", sila,
-              "\nodporność = ", odpornosc,
-              "\nzwinność = ", zwinnosc,
-              '\nzręczność = ', zrecznosc,
-              '\ninteligencja = ', inteligencja,
-              '\nsiła woli = ', silawoli,
-              '\nogłada = ', oglada)
-        print("Pieniądze: ",
-              "\nmiedziaki: ", random.randint(0, 20),
-              "\nsrebrniki: ", (level_number - 2) * random.randint(0, 5),
-              "\nzłoto: ", (level_number - 2) * random.randint(0, 1))
-        print("Przedmioty: ")
-        print(armour)
-        print(waepon)
-        print(loot)
-        for j in range(1, (level_number-1) * random.randint(2, 6)):
+        warhammer_datas = [name, " ", level, "\nwzrost=", wzrost, "cm", " \nwaga=", waga, " \nwiek=", wiek, '\nhp = ',
+                          hp]
+        warhammer_stats = ["walka wręcz = ", walkawrecz, "\numiejętności strzeleckie = ", umiejetnoscistrzeleckie,
+                          "\nsiła = ", sila, "\nodporność = ", odpornosc, "\nzwinność = ", zwinnosc, '\nzręczność = ',
+                          zrecznosc, '\ninteligencja = ', inteligencja, '\nsiła woli = ', silawoli, '\nogłada = ',
+                          oglada]
+        warhammer_items = ["\nKredyty: ", random.randint(1, 50), "\nPrzedmioty: ", armour, waepon, "\nPrzedmioty:", loot,
+                          "\nLosowe słowa które go określają: "]
+        random_items = ""
+        for j in range(1, (level_number - 1) * random.randint(2,
+                                                              6)):  # This loop will add the random nouns that describe a character or his features
             random_noun = random.randrange(len(nouns))
             noun = nouns[random_noun]
             noun = noun.replace('\n', ' ')
-            print(noun, end="")
+            random_items = str(random_items) + noun
 
-        print("\n****************************************")
+        warhammer_character = [warhammer_datas, warhammer_stats, warhammer_items, random_items]
 
-warhammer_fantasy_rpg()
+    return warhammer_character
+
+print(warhammer_fantasy_rpg(1))
 
