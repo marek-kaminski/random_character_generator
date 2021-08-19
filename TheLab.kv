@@ -42,10 +42,40 @@ BoxLayoutExample:
             padding_x: 10
             size_hint: 1, .5
 
-	Label:
-		text: root.my_text
-		text_size: self.width, None
-		#size_hint: .3, .3
+    BoxLayout:
+        orientation: "vertical"
+        GridLayout:
+            size_hint: 1, 0.67
+            cols: 2
+            rows: 2
+            Label:
+                text: "Liczba postaci: "
+                text_size: self.width, None
+                padding_x: 10
+                size_hint: 1, .5
+            Label:
+                text: root.character_amount_display
+                text_size: self.width, None
+                padding_x: 10
+            Button:
+                text: "+"
+                text_size: self.width, None
+                on_press: root.on_button_add()
+                padding_x: 40
+                size_hint: 1, .3
+
+            Button:
+                text: "-"
+                text_size: self.width, None
+                on_press: root.on_button_remove()
+                padding_x: 10
+
+        Label:
+            text: root.my_text
+            #text_size = self.size
+            text_size: self.width, None
+            #align:center
+            #size_hint: .3, .3
 
 
 

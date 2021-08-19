@@ -155,9 +155,3 @@ def stalker_rpg(character_number):
 
     return stalker_character
 
-
-print(stalker_rpg(1))
-
-
-
-

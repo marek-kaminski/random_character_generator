@@ -131,4 +131,3 @@ def Star_Wars_rpg(character_number):
 
     return starwars_character
 
-print(Star_Wars_rpg(1))

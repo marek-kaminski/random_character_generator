@@ -135,5 +135,3 @@ def warhammer_fantasy_rpg(character_number):
 
     return warhammer_character
 
-print(warhammer_fantasy_rpg(1))
-
