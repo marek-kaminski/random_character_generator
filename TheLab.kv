@@ -20,7 +20,7 @@ BoxLayoutExample:
             on_press: root.on_button_click_STALKER()
             padding_x: 10
             size_hint: 1, .5
-
+            #spacing: "20dp", "20dp"
 
         Button:
             text: "Star Wars"
@@ -69,13 +69,15 @@ BoxLayoutExample:
                 text_size: self.width, None
                 on_press: root.on_button_remove()
                 padding_x: 10
-
-        Label:
-            text: root.my_text
-            #text_size = self.size
-            text_size: self.width, None
-            #align:center
-            #size_hint: .3, .3
+        ScrollView:
+            Label:
+                size_hint: None, None
+                text: root.my_text
+                size: self.texture_size
+                #text_size: self.width, None
+                #text_size: None, self.width
+                #align:center
+                #size_hint: .3, .3
 
 
 

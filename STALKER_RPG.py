@@ -137,7 +137,7 @@ def stalker_rpg(character_number):
         else:
             loot = "ulepszenie do broni"
 
-        stalker_datas = [name, " ", level, "\nwzrost=", wzrost, "cm", " \nwaga=", waga, " \nwiek=", wiek,
+        stalker_datas = ["\n", name, " ", level, "\nwzrost=", wzrost, "cm", " \nwaga=", waga, " \nwiek=", wiek,
                           '\nhp = ', hp]
         stalker_stats = ["walka wręcz = ", walkawrecz, "\numiejętności strzeleckie = ", umiejetnoscistrzeleckie,
                           "\nsiła = ", sila, "\nodporność = ", odpornosc, "\nzwinność = ", zwinnosc,
@@ -151,7 +151,7 @@ def stalker_rpg(character_number):
             noun = noun.replace('\n', ' ')
             random_items = str(random_items) + noun
 
-        stalker_character = [stalker_datas, stalker_stats, stalker_items, random_items]
+        stalker_character = [stalker_character, stalker_datas, stalker_stats, stalker_items, random_items, "\n"]
 
     return stalker_character
 

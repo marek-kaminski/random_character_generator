@@ -131,7 +131,7 @@ def warhammer_fantasy_rpg(character_number):
             noun = noun.replace('\n', ' ')
             random_items = str(random_items) + noun
 
-        warhammer_character = [warhammer_datas, warhammer_stats, warhammer_items, random_items]
+        warhammer_character = [warhammer_character, warhammer_datas, warhammer_stats, warhammer_items, random_items]
 
     return warhammer_character
 

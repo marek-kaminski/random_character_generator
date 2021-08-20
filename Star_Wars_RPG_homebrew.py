@@ -126,7 +126,7 @@ def Star_Wars_rpg(character_number):
             random_items = str(random_items) + noun
 
 
-        starwars_character = [ starwars_datas, starwars_stats, starwars_items, random_items]
+        starwars_character = [starwars_character, starwars_datas, starwars_stats, starwars_items, random_items]
 
 
     return starwars_character

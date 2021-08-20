@@ -32,11 +32,15 @@ class BoxLayoutExample(BoxLayout):
         return character_amount
 
     def on_button_remove(self):
-        self.character_amount -= 1
-        self.character_amount_display = str(self.character_amount)
+        if self.character_amount >1:
+            self.character_amount -= 1
+            self.character_amount_display = str(self.character_amount)
+        else:
+            pass
     def on_button_click_STALKER(self):
-        stalker_rpg(1)
-        stalker_character = stalker_rpg(1)
+        stalker_rpg(self.character_amount)
+        stalker_character = stalker_rpg(self.character_amount)
+
         abc_list_cleared = [
             str(stalker_character).replace('[', "").replace(',', "").replace("'", "").replace(']', "").replace('"', "").replace('\\n', "\n")]
         abc_list_cleared = (' '.join(abc_list_cleared))
@@ -45,8 +49,8 @@ class BoxLayoutExample(BoxLayout):
         self.my_text = str(abc_list_cleared)
 
     def on_button_click_Star_Wars(self):
-        Star_Wars_rpg(1)
-        starwars_character = Star_Wars_rpg(1)
+        Star_Wars_rpg(self.character_amount)
+        starwars_character = Star_Wars_rpg(self.character_amount)
         abc_list_cleared = [
             str(starwars_character).replace('[', "").replace(',', "").replace("'", "").replace(']', "").replace('"', "").replace('\\n', "\n")]
         abc_list_cleared = (' '.join(abc_list_cleared))
@@ -55,8 +59,8 @@ class BoxLayoutExample(BoxLayout):
         self.my_text = str(abc_list_cleared)
 
     def on_button_click_Warhammer_fantasy(self):
-        warhammer_fantasy_rpg(1)
-        starwars_character = warhammer_fantasy_rpg(1)
+        warhammer_fantasy_rpg(self.character_amount)
+        starwars_character = warhammer_fantasy_rpg(self.character_amount)
         abc_list_cleared = [
             str(starwars_character).replace('[', "").replace(',', "").replace("'", "").replace(']', "").replace('"', "").replace('\\n', "\n")]
         abc_list_cleared = (' '.join(abc_list_cleared))
@@ -65,8 +69,8 @@ class BoxLayoutExample(BoxLayout):
         self.my_text = str(abc_list_cleared)
 
     def on_button_click_DnD(self):
-        dnd_rpg(1)
-        dnd_character = dnd_rpg(1)
+        dnd_rpg(self.character_amount)
+        dnd_character = dnd_rpg(self.character_amount)
         abc_list_cleared = [
             str(dnd_character).replace('[', "").replace(',', "").replace("'", "").replace(']', "").replace('"', "").replace('\\n', "\n")]
         abc_list_cleared = (' '.join(abc_list_cleared))
