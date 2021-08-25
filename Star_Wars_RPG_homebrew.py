@@ -115,7 +115,7 @@ def Star_Wars_rpg(character_number):
         else:
             loot = "generator pola +3 pp(3 tury)"
 
-        starwars_datas = [name, " ", level,"\nwzrost=", wzrost, "cm", " \nwaga=", waga, " \nwiek=", wiek,'\nhp = ', hp]
+        starwars_datas = ["\n", name, " ", level,"\nwzrost=", wzrost, "cm", " \nwaga=", waga, " \nwiek=", wiek,'\nhp = ', hp]
         starwars_stats = ["walka wręcz = ", walkawrecz,"\numiejętności strzeleckie = ", umiejetnoscistrzeleckie,"\nsiła = ", sila,"\nodporność = ", odpornosc,"\nzwinność = ", zwinnosc,'\nzręczność = ', zrecznosc, '\ninteligencja = ', inteligencja, '\nsiła woli = ', silawoli, '\nogłada = ', oglada]
         starwars_items = ["\nKredyty: ", random.randint(1, 50), "\nPancerz: ", armour, "\nBroń: " ,  waepon, "\nPrzedmioty:" ,  loot, "\nLosowe słowa które go określają: "]
         random_items = ""
@@ -126,7 +126,7 @@ def Star_Wars_rpg(character_number):
             random_items = str(random_items) + noun
 
 
-        starwars_character = [starwars_character, starwars_datas, starwars_stats, starwars_items, random_items]
+        starwars_character = [starwars_character, starwars_datas, starwars_stats, starwars_items, random_items, "\n"]
 
 
     return starwars_character

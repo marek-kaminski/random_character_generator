@@ -23,8 +23,9 @@ class BoxLayoutExample(BoxLayout):
     character_amount = 1
     character_amount_display = StringProperty("1")
 
+    # need to add the "self." property before my_text, otherwise it will be a local variable
     def on_button_add(self):
-        # need to add the "self." property before my_text, otherwise it will be a local variable
+
         self.character_amount += 1
         character_amount = 1
         character_amount += 1
@@ -44,8 +45,6 @@ class BoxLayoutExample(BoxLayout):
         abc_list_cleared = [
             str(stalker_character).replace('[', "").replace(',', "").replace("'", "").replace(']', "").replace('"', "").replace('\\n', "\n")]
         abc_list_cleared = (' '.join(abc_list_cleared))
-
-        #need to add the "self." property before my_text, otherwise it will be a local variable
         self.my_text = str(abc_list_cleared)
 
     def on_button_click_Star_Wars(self):
@@ -54,8 +53,6 @@ class BoxLayoutExample(BoxLayout):
         abc_list_cleared = [
             str(starwars_character).replace('[', "").replace(',', "").replace("'", "").replace(']', "").replace('"', "").replace('\\n', "\n")]
         abc_list_cleared = (' '.join(abc_list_cleared))
-
-        #need to add the "self." property before my_text, otherwise it will be a local variable
         self.my_text = str(abc_list_cleared)
 
     def on_button_click_Warhammer_fantasy(self):
@@ -64,8 +61,6 @@ class BoxLayoutExample(BoxLayout):
         abc_list_cleared = [
             str(starwars_character).replace('[', "").replace(',', "").replace("'", "").replace(']', "").replace('"', "").replace('\\n', "\n")]
         abc_list_cleared = (' '.join(abc_list_cleared))
-
-        #need to add the "self." property before my_text, otherwise it will be a local variable
         self.my_text = str(abc_list_cleared)
 
     def on_button_click_DnD(self):
@@ -74,8 +69,6 @@ class BoxLayoutExample(BoxLayout):
         abc_list_cleared = [
             str(dnd_character).replace('[', "").replace(',', "").replace("'", "").replace(']', "").replace('"', "").replace('\\n', "\n")]
         abc_list_cleared = (' '.join(abc_list_cleared))
-
-        #need to add the "self." property before my_text, otherwise it will be a local variable
         self.my_text = str(abc_list_cleared)
 
 

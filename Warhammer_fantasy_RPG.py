@@ -115,7 +115,7 @@ def warhammer_fantasy_rpg(character_number):
         else:
             loot = "pancerz lepszej jakości"
 
-        warhammer_datas = [name, " ", level, "\nwzrost=", wzrost, "cm", " \nwaga=", waga, " \nwiek=", wiek, '\nhp = ',
+        warhammer_datas = ["\n", name, " ", level, "\nwzrost=", wzrost, "cm", " \nwaga=", waga, " \nwiek=", wiek, '\nhp = ',
                           hp]
         warhammer_stats = ["walka wręcz = ", walkawrecz, "\numiejętności strzeleckie = ", umiejetnoscistrzeleckie,
                           "\nsiła = ", sila, "\nodporność = ", odpornosc, "\nzwinność = ", zwinnosc, '\nzręczność = ',
@@ -131,7 +131,7 @@ def warhammer_fantasy_rpg(character_number):
             noun = noun.replace('\n', ' ')
             random_items = str(random_items) + noun
 
-        warhammer_character = [warhammer_character, warhammer_datas, warhammer_stats, warhammer_items, random_items]
+        warhammer_character = [warhammer_character, warhammer_datas, warhammer_stats, warhammer_items, random_items, "\n"]
 
     return warhammer_character
 
