@@ -6,8 +6,8 @@ nouns = ['Ability\n', 'Access\n', 'Accident\n', 'Account\n', 'Act\n', 'Action\n'
 
 
 def Star_Wars_rpg(character_number):
-    # character_number = int(input('wybierz liczbę postaci: '))
-    # character_number = 1
+
+
     def random_stat_d10():
         stat = 0
         for i in range(0, level_number):

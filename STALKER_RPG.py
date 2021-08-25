@@ -6,7 +6,6 @@ nouns = ['Ability\n', 'Access\n', 'Accident\n', 'Account\n', 'Act\n', 'Action\n'
 
 
 def stalker_rpg(character_number):
-    # character_number = int(input('wybierz liczbę postaci: '))
     def random_stat_d10():
         stat = 0
         for i in range(0, level_number):
@@ -15,7 +14,6 @@ def stalker_rpg(character_number):
 
     stalker_character = ""
     for i in range(0, character_number):
-        # kod na stalkera
 
         random_percentage_level = random.randint(1, 90)
         if random_percentage_level <= 80:
