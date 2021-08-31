@@ -78,9 +78,9 @@ def dnd_rpg(character_number):
         # determining the armour
         random_percentage_armour = (5 * (level_number - 1)) + random.randint(1, 90)
         if random_percentage_armour <= 50:
-            armour = "zwykłe ubrania 10 + ZR"
+            armour = "zwykłe ubrania 10 + " + str((DEX-10) // 2)
         elif random_percentage_armour <= 80:
-            armour = "pancerz skórzany 12 + ZR"
+            armour = "pancerz skórzany 12 +" + str((DEX-10) // 2)
         elif random_percentage_armour <= 95:
             armour = "pancerz ćwiekowany 14 + ZR(max 2)"
         elif random_percentage_armour <= 99:
@@ -121,7 +121,7 @@ def dnd_rpg(character_number):
         DnD_items = ["\nPieniądze: ",
                   "\nmiedziaki: ", random.randint(0, 100),
                   "\nsrebrniki: ", (level_number - 1) * random.randint(0, 10),
-                  "\nzłoto: ", (level_number - 2) * random.randint(0, 5), "\nUzbrojenie: ", armour, waepon, "\nPrzedmioty:", loot,
+                  "\nzłoto: ", (level_number - 2) * random.randint(0, 5), "\nPancerz: ", armour, "\nBroń: ",  waepon, "\nPrzedmioty:", loot,
                            "\nLosowe słowa które go określają: "]
         random_items = ""
         for j in range(1, (level_number - 1) * random.randint(2,
@@ -131,7 +131,7 @@ def dnd_rpg(character_number):
             noun = noun.replace('\n', ' ')
             random_items = str(random_items) + noun
 
-        DnD_character = [DnD_datas, DnD_stats, DnD_items, random_items]
+        DnD_character = [DnD_character, DnD_datas, DnD_stats, DnD_items, random_items, "\n\n"]
 
     return DnD_character
 
